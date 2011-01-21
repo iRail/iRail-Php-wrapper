@@ -1,0 +1,31 @@
+<?php
+
+class Liveboard
+{
+    private $timeStamp;
+    private $station;
+    private $arrivalsAndDepartures;
+
+    function __construct(DateTime $timeStamp, Station $station, $arrivalsAndDepartures)
+    {
+        $this->timeStamp = $timeStamp;
+        $this->station = $station;
+        $this->arrivalsAndDepartures = $arrivalsAndDepartures;
+    }
+
+    public function getArrivalsAndDepartures()
+    {
+        return $this->arrivalsAndDepartures;
+    }
+
+    public function getStation()
+    {
+        return $this->station;
+    }
+
+    public function getTimeStamp()
+    {
+        return $this->timeStamp;
+    }
+}
+?>
